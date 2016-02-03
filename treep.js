@@ -23,8 +23,8 @@ function b() {
       
       a = Math.PI / 180 * k; // deg to rad
 
-      
-      if ( l % 2 == 0 && l != 1) a = Math.PI/2 - a;
+      // special mode
+      //if ( l % 2 == 0 && l != 1) a = Math.PI/2 - a;
       
       
       if (d >= 1) {
@@ -53,28 +53,32 @@ q.addEventListener('touchmove', function(e) {
   k = sa(o);
   b();
 }, false);
+
 q.addEventListener('touchstart', function(e) { 
   e.preventDefault();
   var o = e.changedTouches[0].pageY;
   k = sa(o);
   b();
 }, false);
+
 q.addEventListener('mousemove', function() { 
   k = sa(event.clientY);
   b();
 }, false);
+
 window.addEventListener('keydown', function(e) {
-	switch (e.keyCode) {
-			case 38: case 39:
-				i = i<m ? ++i : m;
-				b();
-				break;
-			case 37: case 40:
-				i = i>1 ? --i : 1;
-				b();
-				break;
+switch (e.keyCode) {
+	case 38: case 39:
+		i = i<m ? ++i : m;
+		b();
+		break;
+	case 37: case 40:
+		i = i>1 ? --i : 1;
+		b();
+		break;
 	}
 }, false);
+
 window.addEventListener('resize', function() {
 	w = q.width = window.innerWidth;
 	h = q.height = window.innerHeight;
