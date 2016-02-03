@@ -1,4 +1,6 @@
 var q = document.createElement('canvas'),
+	colours = ["red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink"],
+	colours_len = colours.length,
     c = q.getContext('2d'),
     w = q.width = window.innerWidth,
     h = q.height = window.innerHeight,
@@ -17,7 +19,7 @@ function b() {
     if(l <= i) {
       
       c.rotate(a);
-      c.fillStyle = l == i ? 'green' : 'rgb(60, ' + 25 * l + ', 20)';
+      c.fillStyle = colours[l % colours_len];
       if (d >= 1) c.fillRect(-d, -2 * d - o, 2 * d, 2 * d);
       c.translate(0,  -2 * d - o);
       
