@@ -1,5 +1,5 @@
 var q = document.createElement('canvas'),
-	colours = ["red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink"],
+	colours = ["red", "orange", "yellow", "green", "cyan", "blue", "purple", "pink", "white", "beige"],
 	colours_len = colours.length,
     c = q.getContext('2d'),
     w = q.width = window.innerWidth,
